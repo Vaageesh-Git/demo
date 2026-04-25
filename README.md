@@ -1,6 +1,5 @@
 # Dummy Vulnerable Repo - testing
 Small intentionally vulnerable Python service for testing Vuln-Swarm end-to-end.
-
 ## Included Vulnerabilities
 
 - `TRB-001`: unsafe `eval(...)`
