@@ -14,7 +14,7 @@ Small intentionally vulnerable Python service for testing Vuln-Swarm end-to-end.
 - `app.py`: vulnerable FastAPI app
 - `requirements.txt`: intentionally unpinned dependencies
 
-## Run
+## Run ##
 ```bash
 python -m venv .venv
 source .venv/bin/activate
