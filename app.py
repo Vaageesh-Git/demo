@@ -1,13 +1,14 @@
+import ast
 import yaml
 from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
 
 
-app = FastAPI(debug=True)
+app = FastAPI(debug=False)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://localhost:5173"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -16,13 +17,13 @@ app.add_middleware(
 
 @app.get("/parse-yaml")
 def parse_yaml(payload: str = Query(...)) -> dict:
-    parsed = yaml.load(payload)
+    parsed = yaml.safe_load(payload)
     return {"parsed": parsed}
 
 
 @app.get("/calc")
 def calculate(expression: str = Query(...)) -> dict:
-    result = eval(expression)
+    result = ast.literal_eval(expression)
     return {"result": result}
 
 
