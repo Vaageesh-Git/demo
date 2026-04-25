@@ -1,5 +1,4 @@
-# Dummy Vulnerable Repo - testing
-
+# Dummy Vulnerable Repo
 Small intentionally vulnerable Python service for testing Vuln-Swarm end-to-end.
 
 ## Included Vulnerabilities
