@@ -1,3 +1,4 @@
+import os
 import ast
 import yaml
 from fastapi import FastAPI, Query
@@ -8,7 +9,7 @@ app = FastAPI(debug=False)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[os.getenv("DEFAULT_ALLOW_ORIGINS_URL", "https://example.com")],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
