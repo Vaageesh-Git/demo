@@ -1,4 +1,4 @@
-# Dummy Vulnerable Repo -
+# Dummy Vulnerable Repo - exi
 Small intentionally vulnerable Python service for testing Vuln-Swarm end-to-end.
 ## Included Vulnerabilities
 
